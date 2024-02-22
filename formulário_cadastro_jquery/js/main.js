@@ -43,6 +43,7 @@ $(document).ready(function() {
         },
         submitHandler: function(form) {
             console.log(form)
+            location.reload();
         },
         invalidHandler: function(evento, validador) {
             let camposIncorretos = validador.numberOfInvalids()
@@ -50,8 +51,5 @@ $(document).ready(function() {
                 alert(`Existem ${camposIncorretos} campos Incorretos`)
             }
         }
-        form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        })
     })
 })
